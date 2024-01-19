@@ -240,6 +240,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.0.4.tgz#e74892f1a9ccf41d3bf5979ad6d3d77c07b9cba1"
   integrity sha512-yEh2+R8qDlDCjxVpzOTEpBLQTEFAcP2A8fUFLaWNap9GitYKkKv1//y2S6XY6zsR4rCOPRpU7plYDR+az2n30A==
 
+"@songmg/react-use-ripple@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@songmg/react-use-ripple/-/react-use-ripple-0.0.5.tgz#373b2a77920894473e3c62d74cbb9f86b8906fa4"
+  integrity sha512-JrE0NF7S1rfNFEEUrOXe+aRxa3FMQiu0xrncKXVDONDLHWqMu4gNwwY51dwqWFsI02ZBXj+E+6ucaco5npZXYA==
+
 "@swc/helpers@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"

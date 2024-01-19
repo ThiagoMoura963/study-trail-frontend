@@ -7,6 +7,6 @@ const theme = {
 }
 
 export type Theme = typeof theme;
-export type ThemeTypography = keyof typeof theme.typography.variants;
+export type ThemeTypographyVariants = keyof typeof theme.typography.variants;
 
 export default theme;
