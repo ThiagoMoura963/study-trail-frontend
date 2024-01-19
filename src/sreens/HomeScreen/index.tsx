@@ -1,8 +1,7 @@
 import Box from "@src/compoents/Box";
 import Text from "@src/compoents/Text";
-import Button from "@src/compoents/Button";
-import ButtonBase from "@src/compoents/Button/ButtonBase";
 import Image from "@src/compoents/Image";
+import Button from "@src/compoents/Button";
 
 export default function HomeScreen() {
   return (
