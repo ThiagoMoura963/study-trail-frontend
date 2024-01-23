@@ -5,7 +5,7 @@ import { parseStyleSheet } from "@displaykit/responsive_styles";
 
 interface StyledBaseComponentProps {
   styleSheet: StyleSheet;
-  ref: any;
+  ref: any
 }
 
 const StyledBaseComponent = styled.div<StyledBaseComponentProps>`

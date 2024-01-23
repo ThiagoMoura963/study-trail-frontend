@@ -6,14 +6,14 @@ export type Variant = 'contained' | 'outlined' | 'ghost';
 function createVariant(theme: Theme, colorVariant: string) {
   return {
     contained: {
-      backgroundColor: theme.colors[colorVariant].x500,
+      backgroundColor: theme.colors[colorVariant].x800,
       color: theme.colors.neutral.x000,
       transition: '.2s all',
       hover: {
-        backgroundColor: theme.colors[colorVariant].x400,
+        backgroundColor: theme.colors[colorVariant].x600,
       },
       focus: {
-        backgroundColor: theme.colors[colorVariant].x600,
+        backgroundColor: theme.colors[colorVariant].x700,
       },
     },
     outlined: {
@@ -30,7 +30,7 @@ function createVariant(theme: Theme, colorVariant: string) {
     },
     ghost: {
       backgroundColor: 'transparent',
-      color: theme.colors[colorVariant].x500,
+      color: theme.colors[colorVariant].x800,
       transition: '.2s all',
       hover: {
         backgroundColor: theme.colors[colorVariant].x050,

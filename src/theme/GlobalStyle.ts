@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     display: flex;
     flex: 1;
+    background-color: 'red';
     flex-direction: column;
   }
   #__next {

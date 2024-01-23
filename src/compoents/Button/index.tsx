@@ -46,3 +46,10 @@ export default function Button({
 
 Button.Base = ButtonBase;
 
+Button.defaultProps = {
+  size: 'md',
+  variant: 'contained',
+  fullWidth: false,
+  colorVariant: 'primary',
+}
+

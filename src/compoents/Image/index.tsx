@@ -10,6 +10,7 @@ interface ImageProps {
 export default function Image({
   src,
   alt,
+  styleSheet,
   ...props
 }: ImageProps) {
   return (
@@ -17,6 +18,12 @@ export default function Image({
       as="img"
       src={src}
       alt={alt}
+      styleSheet={{
+        hover: {
+          ...styleSheet?.hover,
+        },
+        ...styleSheet
+      }}
       {...props}
     />   
   )

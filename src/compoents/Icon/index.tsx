@@ -1,6 +1,7 @@
-import * as icons from "./svgs/_index";
+import * as iconSet from "@fortawesome/free-solid-svg-icons";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { BaseComponent } from "@src/theme/BaseComponent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const iconSizes = {
   xs: '12px',
@@ -12,17 +13,22 @@ const iconSizes = {
 
 interface IconProps {
   styleSheet?: StyleSheet;
-  name: keyof typeof icons;
+  name: string;
   size?: keyof typeof iconSizes;
+  icon?: keyof typeof iconSet; 
+}
+
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export default function Icon({
   size,
   name,
+  icon,
   styleSheet,
   ...props
 }: IconProps) {
-  const CurrentIcon = icons[name] || icons['default_icon'];
 
   return (
     <BaseComponent 
@@ -34,16 +40,16 @@ export default function Icon({
       }}
       color="inherit"
       fill="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <CurrentIcon />
+        <FontAwesomeIcon 
+           icon={iconSet[`fa${capitalize(name)}`]}
+        />
     </BaseComponent>
   )
 }
 
 Icon.defaultProps = {
   size: 'md',
-  name: 'default_icons',
+  colorVariant: 'primary',
 }
