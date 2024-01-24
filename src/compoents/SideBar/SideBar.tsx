@@ -130,6 +130,10 @@ export default function SideBar() {
               alignItems: 'center', 
               gap: '1rem',
               borderRadius: '50px',
+              padding: {
+                xs: '0',
+                md: '.5rem'
+              },
             }}
           >
             <Image
@@ -138,12 +142,21 @@ export default function SideBar() {
               styleSheet={{
                 alignSelf: 'center',
                 borderRadius: '50%',
-                width: '60px'
+                width: '60px',
               }}
             />
-            <Text tag="span" styleSheet={{ fontWeight: 600, color: theme.colors.primary.x800 }}>Thiago Moura</Text>
-
-
+            <Text 
+              tag="span" 
+              styleSheet={{ 
+                fontWeight: 600, 
+                color: theme.colors.primary.x800,
+                display: {
+                  xs: 'none',
+                  md: 'flex',
+                }
+              }}>
+                Thiago Moura
+            </Text>
           </Button>
         </Box>
       </Box>

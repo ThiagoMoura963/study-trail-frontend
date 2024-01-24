@@ -1,16 +1,16 @@
+import Card from "./patterns/Card";
 import Box from "@src/compoents/Box";
-import Text from "@src/compoents/Text";
-import Image from "@src/compoents/Image";
-import Button from "@src/compoents/Button";
-import SideBar from "../../compoents/SideBar/SideBar";
-import { useTheme } from "@src/theme/ThemeProvider";
-import Icon from "@src/compoents/Icon";
 import Footer from "./patterns/Footer/Footer";
 import Background from "./patterns/Background";
 import MainSection from "./patterns/MainSection";
-import Card from "./patterns/Card";
+import { useTheme } from "@src/theme/ThemeProvider";
+import type { Option } from "@src/services/options/OptionService";
 
-export default function HomeScreen() {
+interface HomeScreenProps {
+  options: Option[]
+}
+
+export default function HomeScreen(props: HomeScreenProps) {
   const theme = useTheme();
   return (
     <>
@@ -27,7 +27,13 @@ export default function HomeScreen() {
       >
         <Background />
         <MainSection />
-        <Card />
+        <Box
+          styleSheet={{
+            borderBottom: `1px solid ${theme.colors.neutral.x200}`,
+            margin: '1rem 2rem'
+          }}
+        />
+        <Card options={props.options} />
         <Footer />
 
       </Box>
